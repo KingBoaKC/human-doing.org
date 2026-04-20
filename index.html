@@ -730,31 +730,55 @@
 
     /* ─── MOBILE ──────────────────────────────────────────── */
     @media (max-width: 900px) {
-      .phases { grid-template-columns: 1fr; }
       .involved-grid { grid-template-columns: 1fr 1fr; }
       .footer-top { grid-template-columns: 1fr 1fr; }
     }
     @media (max-width: 768px) {
+      .nav-inner { height: 80px; padding: 0 1.25rem; }
+      .nav-inner img { height: 68px !important; }
       .nav-links, .nav-cta { display: none; }
       .nav-toggle { display: flex; }
       .nav-links.open {
         display: flex;
         flex-direction: column;
         position: fixed;
-        top: 68px; left: 0; right: 0;
+        top: 80px; left: 0; right: 0;
         background: var(--white);
-        padding: 2rem;
-        gap: 1.5rem;
+        padding: 1.5rem;
+        gap: 1.25rem;
         border-bottom: 1px solid var(--p-mist);
-        box-shadow: 0 8px 32px rgba(108,99,255,0.1);
+        box-shadow: 0 8px 32px rgba(30,107,74,0.1);
+        z-index: 99;
       }
-      .about-grid, .contact-grid, .mission-inner { grid-template-columns: 1fr; gap: 3rem; }
+      section { padding: 4rem 1.25rem; }
+      #home { padding: 100px 1.25rem 4rem; }
+      #mission { padding: 3rem 1.25rem; }
+      .about-grid, .contact-grid, .mission-inner { grid-template-columns: 1fr; gap: 2.5rem; }
       .services-grid { grid-template-columns: 1fr; }
-      .involved-grid { grid-template-columns: 1fr; }
+      .involved-grid { grid-template-columns: 1fr 1fr; }
       .form-row { grid-template-columns: 1fr; }
-      .hero-stats { grid-template-columns: 1fr 1fr; gap: 2rem; }
+      .hero-stats { grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+      .hero-actions { flex-direction: column; }
+      .hero-actions a { text-align: center; }
       .footer-top { grid-template-columns: 1fr; gap: 2rem; }
-      .footer-bottom { flex-direction: column; align-items: flex-start; }
+      .footer-bottom { flex-direction: column; align-items: flex-start; gap: 0.75rem; }
+      .footer-legal { flex-wrap: wrap; gap: 1rem; }
+      .service-card { padding: 1.75rem; }
+      .involve-card { padding: 1.5rem; }
+      .questions-block { padding: 1.5rem; }
+      .contact-item { flex-wrap: wrap; gap: 0.5rem; }
+      .contact-item-label { min-width: unset; }
+    }
+    @media (max-width: 480px) {
+      .nav-inner img { height: 54px !important; }
+      .nav-inner { height: 68px; }
+      .nav-links.open { top: 68px; }
+      .hero-stats { grid-template-columns: 1fr 1fr; }
+      .involved-grid { grid-template-columns: 1fr; }
+      .hero-title { font-size: 2.5rem; }
+      section { padding: 3rem 1rem; }
+      #home { padding: 88px 1rem 3rem; }
+      .footer-legal { flex-direction: column; gap: 0.5rem; }
     }
   </style>
 </head>
